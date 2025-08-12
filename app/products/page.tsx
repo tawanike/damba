@@ -1,6 +1,6 @@
 import { ProductGrid } from "@/components/marketplace/product-grid"
-import { SAMPLE_PRODUCTS } from "@/lib/data/products"
 import { ThreeColumnShell } from "@/components/marketplace/layout-controls"
+import { SAMPLE_PRODUCTS } from "@/lib/data/products"
 
 export default function ProductsPage() {
   return (

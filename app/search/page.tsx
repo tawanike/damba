@@ -3,8 +3,8 @@
 import { useState } from "react"
 import { ThreeColumnShell } from "@/components/marketplace/layout-controls"
 import { ProductGrid } from "@/components/marketplace/product-grid"
-import { SAMPLE_PRODUCTS } from "@/lib/data/products"
 import { Input } from "@/components/ui/input"
+import { SAMPLE_PRODUCTS } from "@/lib/data/products"
 
 export default function SearchPage() {
   const [query, setQuery] = useState("")

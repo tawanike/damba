@@ -18,7 +18,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     priceCents: 12900,
     currency: "USD",
     imageUrl:
-      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop",
+      "https://picsum.photos/seed/p-wood-chair/1200/900",
     category: "Furniture",
     seller: "NordWood Studio",
   },
@@ -30,7 +30,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     priceCents: 89900,
     currency: "USD",
     imageUrl:
-      "https://images.unsplash.com/photo-1549187774-b4e9b0445b41?q=80&w=1200&auto=format&fit=crop",
+      "https://picsum.photos/seed/p-linen-sofa/1200/900",
     category: "Furniture",
     seller: "Casa Verde",
   },
@@ -42,7 +42,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     priceCents: 6900,
     currency: "USD",
     imageUrl:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop",
+      "https://picsum.photos/seed/p-desk-lamp/1200/900",
     category: "Lighting",
     seller: "Lightform",
   },
@@ -54,7 +54,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     priceCents: 11900,
     currency: "USD",
     imageUrl:
-      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop",
+      "https://picsum.photos/seed/p-coffee-grinder/1200/900",
     category: "Appliances",
     seller: "Brewsmith",
   },
@@ -66,7 +66,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     priceCents: 17900,
     currency: "USD",
     imageUrl:
-      "https://images.unsplash.com/photo-1518444006665-68bbe828ecd1?q=80&w=1200&auto=format&fit=crop",
+      "https://picsum.photos/seed/p-wireless-headphones/1200/900",
     category: "Electronics",
     seller: "SonicWave",
   },
@@ -78,7 +78,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     priceCents: 12900,
     currency: "USD",
     imageUrl:
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop",
+      "https://picsum.photos/seed/p-running-shoes/1200/900",
     category: "Sports",
     seller: "FleetFoot",
   },
@@ -90,7 +90,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     priceCents: 5900,
     currency: "USD",
     imageUrl:
-      "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop",
+      "https://picsum.photos/seed/p-cast-iron-skillet/1200/900",
     category: "Kitchen",
     seller: "Forge & Flame",
   },
@@ -102,7 +102,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     priceCents: 7900,
     currency: "USD",
     imageUrl:
-      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop",
+      "https://picsum.photos/seed/p-plant-bundle/1200/900",
     category: "Home & Garden",
     seller: "Green & Co.",
   },

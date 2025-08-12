@@ -10,6 +10,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const { id } = await params
   const product = SAMPLE_PRODUCTS.find(p => p.id === id)
   if (!product) return notFound()
+  const recommendations = SAMPLE_PRODUCTS.filter(p => p.id !== product.id && p.category === product.category).slice(0, 4)
 
   return (
     <ThreeColumnShell
@@ -49,7 +50,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <div>
             <h3 className="text-sm font-semibold mb-2">You may also like</h3>
             <div className="grid grid-cols-2 gap-3">
-              {SAMPLE_PRODUCTS.filter(p => p.id !== product.id).slice(0, 4).map(p => (
+              {recommendations.map(p => (
                 <Card key={p.id}>
                   <Link href={`/products/${p.id}`}>
                     <div className="relative aspect-[4/3] rounded-t-md overflow-hidden">
