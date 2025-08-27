@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={`${geistSans.className} antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
@@ -39,11 +39,11 @@ export default function RootLayout({
         {/* ProductIQ widget - loads after page is interactive */}
         <Script id="productiq-widget" strategy="afterInteractive">
           {`(function() {
-    var script = document.createElement('script');
-    script.src = 'http://localhost:3003/widget.js?id=pk_live_1234567890abcdef';
-    script.async = true;
-    document.head.appendChild(script);
-  })();`}
+            var script = document.createElement('script');
+            script.src = 'https://www.productiq.tech/widget.js?api_key=pk_live_PR570MTISEENtUPL7jLVjgzyDe9I2eaN';
+            script.async = true;
+            document.head.appendChild(script);
+          })();`}
         </Script>
       </body>
     </html>
