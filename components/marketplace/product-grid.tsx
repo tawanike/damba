@@ -57,8 +57,8 @@ export function ProductGrid({ products, query: controlledQuery, category: contro
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {filtered.map((p) => (
-          <ProductCard key={p.id} product={p} />
+        {filtered.map((p, index) => (
+          <ProductCard key={`${p.id}-${index}`} product={p} />
         ))}
         {filtered.length === 0 && (
           <div className="col-span-full text-sm text-muted-foreground">No products found.</div>

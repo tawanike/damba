@@ -31,7 +31,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           </div>
           <div className="flex flex-col gap-4">
             <h1 className="text-2xl font-bold">{product.name}</h1>
-            <div className="text-muted-foreground text-sm">Sold by {product.seller} · {product.category}</div>
+            <div className="text-muted-foreground text-sm">Sold by {product.seller?.name || 'Unknown Seller'} · {product.category}</div>
             <div className="text-3xl font-semibold">{formatPrice(product.priceCents, product.currency)}</div>
             <p className="text-sm leading-6">{product.description}</p>
             <div className="flex gap-3 pt-2">
