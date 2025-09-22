@@ -1,3 +1,4 @@
+// @ts-ignore: Allow regex flag 's' for ES2018+
 import { v4 as uuidv4 } from 'uuid';
 // Import the file content as a string to avoid TypeScript compilation issues
 import { readFileSync } from 'fs';
@@ -7,7 +8,7 @@ import { join } from 'path';
 const productsFile = readFileSync(join(process.cwd(), 'lib/data/products.ts'), 'utf-8');
 
 // Extract the SAMPLE_PRODUCTS array using a simple regex
-const productsMatch = productsFile.match(/export const SAMPLE_PRODUCTS = (\[.*?\]);/s);
+const productsMatch = productsFile.match(/export const SAMPLE_PRODUCTS = (\[[\s\S]*?\]);/);
 if (!productsMatch) {
   console.error('Could not find SAMPLE_PRODUCTS in products.ts');
   process.exit(1);
@@ -16,7 +17,6 @@ if (!productsMatch) {
 // Use Function constructor to safely evaluate the array
 const SAMPLE_PRODUCTS = new Function(`return ${productsMatch[1]}`)();
 import { writeFileSync } from 'fs';
-import { join } from 'path';
 
 // Function to generate a new UUID
 const generateId = () => uuidv4();
@@ -33,12 +33,12 @@ const getOrCreateId = (oldId: string): string => {
 };
 
 // Update product IDs and related IDs
-const updatedProducts = SAMPLE_PRODUCTS.map(product => {
+const updatedProducts = SAMPLE_PRODUCTS.map((product: any) => {
   // Create a new product with a UUID
   const updatedProduct = {
     ...product,
     id: getOrCreateId(product.id),
-    comments: product.comments.map(comment => ({
+    comments: product.comments.map((comment: any) => ({
       ...comment,
       id: getOrCreateId(comment.id),
       user: {
@@ -47,7 +47,7 @@ const updatedProducts = SAMPLE_PRODUCTS.map(product => {
       }
     }))
   };
-  
+
   return updatedProduct;
 });
 

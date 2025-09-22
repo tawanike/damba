@@ -19,29 +19,45 @@ const categoriesJson = readFileSync(categoriesPath, 'utf-8');
 // Parse the JSON data
 const categoriesData = JSON.parse(categoriesJson);
 
-// Remove href field from all subcategories and generate new slugs from titles
+// Process categories and subcategories, keeping image fields and generating new slugs from titles
 const processedData = {
   ...categoriesData,
-  categories: categoriesData.categories.map((category: any) => ({
-    title: category.title,
-    slug: generateSlug(category.title), // Generate slug from title
-    subcategories: category.subcategories.map((sub: any) => ({
-      title: sub.title,
-      slug: generateSlug(sub.title) // Generate slug from title
-      // href field is intentionally excluded
-    }))
-  }))
+  categories: categoriesData.categories.map((category: any) => {
+    const processedCategory: any = {
+      title: category.title,
+      slug: generateSlug(category.title), // Generate slug from title
+      subcategories: category.subcategories.map((sub: any) => {
+        const processedSub: any = {
+          title: sub.title,
+          slug: generateSlug(sub.title), // Generate slug from title
+          // href field is intentionally excluded
+        };
+        // Only include image if it exists
+        if (sub.image) {
+          processedSub.image = sub.image;
+        }
+        return processedSub;
+      })
+    };
+    // Only include image if it exists
+    if (category.image) {
+      processedCategory.image = category.image;
+    }
+    return processedCategory;
+  })
 };
 
 // Define types for better type safety
 type Subcategory = {
   title: string;
   slug: string;
+  image?: string;
 };
 
 type Category = {
   title: string;
   slug: string;
+  image?: string;
   subcategories: Subcategory[];
 };
 
@@ -58,11 +74,13 @@ const fileContent = `// This file is auto-generated from categories.json
 export type Subcategory = {
   title: string;
   slug: string;
+  image?: string;
 };
 
 export type Category = {
   title: string;
   slug: string;
+  image?: string;
   subcategories: Subcategory[];
 };
 

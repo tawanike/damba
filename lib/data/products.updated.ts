@@ -11,25 +11,21 @@ export type Product = {
     name: string
     imageUrl: string
   },
-  comments: [
-    {
-      id: string,
-      content: string,
-      user: {
-        name: string,
-        imageUrl: string
-      },
-      createdAt: string
-    }
-  ],
+  comments: {
+    id: string,
+    content: string,
+    user: {
+      name: string,
+      imageUrl: string
+    },
+    createdAt: string
+  }[],
   onSale: boolean,
   inStock: boolean,
-  faq: [
-    {
-      question: string,
-      answer: string
-    }
-  ]
+  faq: {
+    question: string,
+    answer: string
+  }[]
 }
 
 export const SAMPLE_PRODUCTS: Product[] = [

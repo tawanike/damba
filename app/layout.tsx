@@ -10,8 +10,8 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Next.js and Supabase Starter Kit",
-  description: "The fastest way to build apps with Next.js and Supabase",
+  title: "Commace - Reliable procurement from around South Africa",
+  description: "A modern marketplace platform built with Next.js and Supabase",
 };
 
 const geistSans = Geist({
@@ -40,7 +40,7 @@ export default function RootLayout({
         <Script id="productiq-widget" strategy="afterInteractive">
           {`(function() {
             var script = document.createElement('script');
-            script.src = 'http://localhost:3003/widget.js?apiKey=pk_live_ME77NTlX1fZLz1L56fDwm0dVXGla404L';
+            script.src = 'https://www.productiq.tech/widget.js?apiKey=pk_live_ME77NTlX1fZLz1L56fDwm0dVXGla404L';
             script.async = true;
             document.head.appendChild(script);
           })();`}

@@ -13,7 +13,7 @@ export function MarketplaceHeader({ onToggleLeft, onToggleRight }: { onToggleLef
         <button onClick={onToggleLeft} className="p-2 rounded-md hover:bg-accent" aria-label="Toggle filters">
           <PanelLeft className="size-5" />
         </button>
-        <div className="font-bold">TradeHub</div>
+        <div className="font-bold">Commace</div>
         <nav className="ml-6 hidden md:flex items-center gap-4 text-sm text-muted-foreground">
           <Link href="/products" className="hover:text-foreground">Products</Link>
           <Link href="/protected" className="hover:text-foreground">Account</Link>

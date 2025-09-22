@@ -1,15 +1,17 @@
 // This file is auto-generated from categories.json
 // Run 'npm run import-categories' to regenerate this file.
-// Generated on: 2025-08-31T04:17:28.097Z
+// Generated on: 2025-09-22T12:07:31.283Z
 
 export type Subcategory = {
   title: string;
   slug: string;
+  image?: string;
 };
 
 export type Category = {
   title: string;
   slug: string;
+  image?: string;
   subcategories: Subcategory[];
 };
 
@@ -27,25 +29,31 @@ export const CATEGORIES_DATA: CategoriesData = {
       "subcategories": [
         {
           "title": "Textile Waste",
-          "slug": "textile-waste"
+          "slug": "textile-waste",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Other Recycling Products",
-          "slug": "other-recycling-products"
+          "slug": "other-recycling-products",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Sewer Products",
-          "slug": "sewer-products"
+          "slug": "sewer-products",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Other Environmental Products",
-          "slug": "other-environmental-products"
+          "slug": "other-environmental-products",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Other Excess Inventory",
-          "slug": "other-excess-inventory"
+          "slug": "other-excess-inventory",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         }
-      ]
+      ],
+      "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-200-200.png"
     },
     {
       "title": "Business Services",
@@ -53,9 +61,11 @@ export const CATEGORIES_DATA: CategoriesData = {
       "subcategories": [
         {
           "title": "Inspection & Quality Control Services",
-          "slug": "inspection-quality-control-services"
+          "slug": "inspection-quality-control-services",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         }
-      ]
+      ],
+      "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-200-200.png"
     },
     {
       "title": "Consumer Electronics",
@@ -63,177 +73,221 @@ export const CATEGORIES_DATA: CategoriesData = {
       "subcategories": [
         {
           "title": "Video Game Consoles",
-          "slug": "video-game-consoles"
+          "slug": "video-game-consoles",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "LED & LCD TVs",
-          "slug": "led-lcd-tvs"
+          "slug": "led-lcd-tvs",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Used Mobile Phones",
-          "slug": "used-mobile-phones"
+          "slug": "used-mobile-phones",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "3G&4G smartphone",
-          "slug": "3g4g-smartphone"
+          "slug": "3g4g-smartphone",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Receivers & Amplifiers",
-          "slug": "receivers-amplifiers"
+          "slug": "receivers-amplifiers",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Card Readers",
-          "slug": "card-readers"
+          "slug": "card-readers",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Tablet PC",
-          "slug": "tablet-pc"
+          "slug": "tablet-pc",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Smart TVs",
-          "slug": "smart-tvs"
+          "slug": "smart-tvs",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Other Consumer Electronics",
-          "slug": "other-consumer-electronics"
+          "slug": "other-consumer-electronics",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Joysticks & Game Controllers",
-          "slug": "joysticks-game-controllers"
+          "slug": "joysticks-game-controllers",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Digital Cameras",
-          "slug": "digital-cameras"
+          "slug": "digital-cameras",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Video Cameras",
-          "slug": "video-cameras"
+          "slug": "video-cameras",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Personal & Home laptops",
-          "slug": "personal-home-laptops"
+          "slug": "personal-home-laptops",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Gaming Monitors",
-          "slug": "gaming-monitors"
+          "slug": "gaming-monitors",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Other Mobile Phone Accessories",
-          "slug": "other-mobile-phone-accessories"
+          "slug": "other-mobile-phone-accessories",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Graphics Cards",
-          "slug": "graphics-cards"
+          "slug": "graphics-cards",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "LCD Monitors",
-          "slug": "lcd-monitors"
+          "slug": "lcd-monitors",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Desktops",
-          "slug": "desktops"
+          "slug": "desktops",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Business laptops",
-          "slug": "business-laptops"
+          "slug": "business-laptops",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Hard Drives",
-          "slug": "hard-drives"
+          "slug": "hard-drives",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Student & Education laptops",
-          "slug": "student-education-laptops"
+          "slug": "student-education-laptops",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Portable Monitors",
-          "slug": "portable-monitors"
+          "slug": "portable-monitors",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Photographic Lighting",
-          "slug": "photographic-lighting"
+          "slug": "photographic-lighting",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Used Cars",
-          "slug": "used-cars"
+          "slug": "used-cars",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Passenger Car Tires",
-          "slug": "passenger-car-tires"
+          "slug": "passenger-car-tires",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Diagnostic Tools",
-          "slug": "diagnostic-tools"
+          "slug": "diagnostic-tools",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Human Hair Wigs",
-          "slug": "human-hair-wigs"
+          "slug": "human-hair-wigs",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Top-Load Washers",
-          "slug": "top-load-washers"
+          "slug": "top-load-washers",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Sportbikes",
-          "slug": "sportbikes"
+          "slug": "sportbikes",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Smart Home Products",
-          "slug": "smart-home-products"
+          "slug": "smart-home-products",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Heat Press Machine",
-          "slug": "heat-press-machine"
+          "slug": "heat-press-machine",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Cooler Box",
-          "slug": "cooler-box"
+          "slug": "cooler-box",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "French Door Refrigerators",
-          "slug": "french-door-refrigerators"
+          "slug": "french-door-refrigerators",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Toilet Tissues",
-          "slug": "toilet-tissues"
+          "slug": "toilet-tissues",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Other Hand Tools",
-          "slug": "other-hand-tools"
+          "slug": "other-hand-tools",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Embroidery Machines",
-          "slug": "embroidery-machines"
+          "slug": "embroidery-machines",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Board shorts&Swim trunks",
-          "slug": "board-shortsswim-trunks"
+          "slug": "board-shortsswim-trunks",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Audio Sound Equipment",
-          "slug": "audio-sound-equipment"
+          "slug": "audio-sound-equipment",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Braiding Hair",
-          "slug": "braiding-hair"
+          "slug": "braiding-hair",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Sports Earphones & Headphones",
-          "slug": "sports-earphones-headphones"
+          "slug": "sports-earphones-headphones",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Used Laptops",
-          "slug": "used-laptops"
+          "slug": "used-laptops",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Sports Eyewear",
-          "slug": "sports-eyewear"
+          "slug": "sports-eyewear",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         },
         {
           "title": "Piston & Parts",
-          "slug": "piston-parts"
+          "slug": "piston-parts",
+          "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-100-100.png"
         }
-      ]
+      ],
+      "image": "https://img.alicdn.com/imgextra/i1/O1CN01zq8Q8f1Q8z8Q8f1Q8z8Q8f_!!6000000001918-2-tps-200-200.png"
     },
     {
       "title": "Apparel & Accessories",
@@ -241,95 +295,118 @@ export const CATEGORIES_DATA: CategoriesData = {
       "subcategories": [
         {
           "title": "Men's Jeans",
-          "slug": "mens-jeans"
+          "slug": "mens-jeans",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=MJ"
         },
         {
           "title": "Tracksuits",
-          "slug": "tracksuits"
+          "slug": "tracksuits",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=TS"
         },
         {
           "title": "Men's Jackets",
-          "slug": "mens-jackets"
+          "slug": "mens-jackets",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=MJ"
         },
         {
           "title": "Men's Hoodies&Sweatshirt Sets",
-          "slug": "mens-hoodiessweatshirt-sets"
+          "slug": "mens-hoodiessweatshirt-sets",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=MH"
         },
         {
           "title": "Plus Size Women's Dresses",
-          "slug": "plus-size-womens-dresses"
+          "slug": "plus-size-womens-dresses",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=PD"
         },
         {
           "title": "Women's Sleepwear",
-          "slug": "womens-sleepwear"
+          "slug": "womens-sleepwear",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=WS"
         },
         {
           "title": "Used Clothes",
-          "slug": "used-clothes"
+          "slug": "used-clothes",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=UC"
         },
         {
           "title": "African Clothing",
-          "slug": "african-clothing"
+          "slug": "african-clothing",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=AC"
         },
         {
           "title": "Women's Coats",
-          "slug": "womens-coats"
+          "slug": "womens-coats",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=WC"
         },
         {
           "title": "Men's Outerwear Sets",
-          "slug": "mens-outerwear-sets"
+          "slug": "mens-outerwear-sets",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=MO"
         },
         {
           "title": "Men's Shirt Sets",
-          "slug": "mens-shirt-sets"
+          "slug": "mens-shirt-sets",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=MS"
         },
         {
           "title": "Men's Sweaters",
-          "slug": "mens-sweaters"
+          "slug": "mens-sweaters",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=MS"
         },
         {
           "title": "TV & Movie Costumes",
-          "slug": "tv-movie-costumes"
+          "slug": "tv-movie-costumes",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=TV"
         },
         {
           "title": "Apparel Stock",
-          "slug": "apparel-stock"
+          "slug": "apparel-stock",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=AS"
         },
         {
           "title": "Women's Jeans",
-          "slug": "womens-jeans"
+          "slug": "womens-jeans",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=WJ"
         },
         {
           "title": "Indian & Pakistani Clothing",
-          "slug": "indian-pakistani-clothing"
+          "slug": "indian-pakistani-clothing",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=IP"
         },
         {
           "title": "Men's Suits",
-          "slug": "mens-suits"
+          "slug": "mens-suits",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=MS"
         },
         {
           "title": "Women's Pants & Trousers",
-          "slug": "womens-pants-trousers"
+          "slug": "womens-pants-trousers",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=WP"
         },
         {
           "title": "Evening Dresses",
-          "slug": "evening-dresses"
+          "slug": "evening-dresses",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=ED"
         },
         {
           "title": "Wedding Dresses",
-          "slug": "wedding-dresses"
+          "slug": "wedding-dresses",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=WD"
         },
         {
           "title": "Women's Hoodies & Sweatshirts",
-          "slug": "womens-hoodies-sweatshirts"
+          "slug": "womens-hoodies-sweatshirts",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=WH"
         },
         {
           "title": "Board shorts&Swim trunks",
-          "slug": "board-shortsswim-trunks"
+          "slug": "board-shortsswim-trunks",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=BS"
         },
         {
           "title": "Workwear",
-          "slug": "workwear"
+          "slug": "workwear",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=WW"
         }
       ]
     },
@@ -339,95 +416,118 @@ export const CATEGORIES_DATA: CategoriesData = {
       "subcategories": [
         {
           "title": "Hookahs",
-          "slug": "hookahs"
+          "slug": "hookahs",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=HK"
         },
         {
           "title": "Cookware Sets",
-          "slug": "cookware-sets"
+          "slug": "cookware-sets",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=CS"
         },
         {
           "title": "Other Lighters & Smoking Accessories",
-          "slug": "other-lighters-smoking-accessories"
+          "slug": "other-lighters-smoking-accessories",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=LS"
         },
         {
           "title": "Area Rugs & Sets",
-          "slug": "area-rugs-sets"
+          "slug": "area-rugs-sets",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=AR"
         },
         {
           "title": "Dinnerware Sets",
-          "slug": "dinnerware-sets"
+          "slug": "dinnerware-sets",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=DS"
         },
         {
           "title": "Sheet & Pillowcase Sets",
-          "slug": "sheet-pillowcase-sets"
+          "slug": "sheet-pillowcase-sets",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=SP"
         },
         {
           "title": "Soup & Stock Pots",
-          "slug": "soup-stock-pots"
+          "slug": "soup-stock-pots",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=SP"
         },
         {
           "title": "Bedding Set",
-          "slug": "bedding-set"
+          "slug": "bedding-set",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=BS"
         },
         {
           "title": "Blinds, Shades & Shutters",
-          "slug": "blinds-shades-shutters"
+          "slug": "blinds-shades-shutters",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=BS"
         },
         {
           "title": "Smart Home Products",
-          "slug": "smart-home-products"
+          "slug": "smart-home-products",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=SH"
         },
         {
           "title": "Storage Boxes & Bins",
-          "slug": "storage-boxes-bins"
+          "slug": "storage-boxes-bins",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=SB"
         },
         {
           "title": "Storage Holders & Racks",
-          "slug": "storage-holders-racks"
+          "slug": "storage-holders-racks",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=SH"
         },
         {
           "title": "Lighters",
-          "slug": "lighters"
+          "slug": "lighters",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=LI"
         },
         {
           "title": "Fencing, Trellis & Gates",
-          "slug": "fencing-trellis-gates"
+          "slug": "fencing-trellis-gates",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=FG"
         },
         {
           "title": "Dishes & Plates",
-          "slug": "dishes-plates"
+          "slug": "dishes-plates",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=DP"
         },
         {
           "title": "Stainless Steel Tumblers",
-          "slug": "stainless-steel-tumblers"
+          "slug": "stainless-steel-tumblers",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=ST"
         },
         {
           "title": "Other Paintings",
-          "slug": "other-paintings"
+          "slug": "other-paintings",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=OP"
         },
         {
           "title": "Party Novelties",
-          "slug": "party-novelties"
+          "slug": "party-novelties",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=PN"
         },
         {
           "title": "Plastic Drinkware",
-          "slug": "plastic-drinkware"
+          "slug": "plastic-drinkware",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=PD"
         },
         {
           "title": "Party Popper & Spray",
-          "slug": "party-popper-spray"
+          "slug": "party-popper-spray",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=PP"
         },
         {
           "title": "Wall Stickers",
-          "slug": "wall-stickers"
+          "slug": "wall-stickers",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=WS"
         },
         {
           "title": "Cake Tools",
-          "slug": "cake-tools"
+          "slug": "cake-tools",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=CT"
         },
         {
           "title": "Still Life Paintings",
-          "slug": "still-life-paintings"
+          "slug": "still-life-paintings",
+          "image": "https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=SL"
         }
       ]
     },

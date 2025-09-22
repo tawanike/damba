@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { AuthButton } from "@/components/auth-button";
@@ -7,12 +9,27 @@ import { Button } from "@/components/ui/button";
 import { ProductGrid } from "@/components/marketplace/product-grid";
 import { SAMPLE_PRODUCTS } from "@/lib/data/products";
 import { hasEnvVars } from "@/lib/utils";
-import { ShoppingCart, User, Search, ChevronRight } from "lucide-react";
+import { ShoppingCart, User, Search, ChevronRight, ChevronDown } from "lucide-react";
+import categoriesData from "@/categories.json";
+import { useState } from "react";
 
 export default function Home() {
-  const categories = Array.from(new Set(SAMPLE_PRODUCTS.map(p => p.category)))
   const featured = SAMPLE_PRODUCTS.slice(0, 8)
   const all = SAMPLE_PRODUCTS
+
+  // State for expandable categories
+  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set())
+  const [categoriesWithImages] = useState(categoriesData.categories)
+
+  const toggleCategory = (categorySlug: string) => {
+    const newExpanded = new Set(expandedCategories)
+    if (newExpanded.has(categorySlug)) {
+      newExpanded.delete(categorySlug)
+    } else {
+      newExpanded.add(categorySlug)
+    }
+    setExpandedCategories(newExpanded)
+  }
 
   return (
     <main className="min-h-screen w-full max-w-full overflow-x-hidden bg-background">
@@ -21,7 +38,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-screen-2xl px-4">
           <div className="flex h-16 items-center gap-4">
             <Link href="/" className="text-2xl font-extrabold tracking-tight">
-              TradeHub
+              Commace
             </Link>
             <form action="/search" className="ml-4 hidden md:flex flex-1 items-center gap-2">
               <div className="relative w-full">
@@ -62,15 +79,57 @@ export default function Home() {
           {/* Left: vertical categories */}
           <aside className="md:col-span-3">
             <div className="border rounded-lg p-2 divide-y">
-              {categories.map((c) => (
-                <Link
-                  key={c}
-                  href={`/categories/${encodeURIComponent(c)}`}
-                  className="flex items-center justify-between px-3 py-2 text-sm hover:bg-accent rounded-md"
-                >
-                  <span>{c}</span>
-                  <ChevronRight className="size-4 text-muted-foreground" />
-                </Link>
+              {categoriesWithImages.map((category) => (
+                <div key={category.slug}>
+                  <div
+                    onClick={() => toggleCategory(category.slug)}
+                    className="flex items-center justify-between px-3 py-2 text-sm hover:bg-accent rounded-md cursor-pointer"
+                  >
+                    <div className="flex items-center gap-2">
+                      {category.image && (
+                        <Image
+                          src={category.image}
+                          alt={category.title}
+                          width={20}
+                          height={20}
+                          className="rounded"
+                        />
+                      )}
+                      <span>{category.title}</span>
+                    </div>
+                    {category.subcategories && category.subcategories.length > 0 ? (
+                      expandedCategories.has(category.slug) ? (
+                        <ChevronDown className="size-4 text-muted-foreground" />
+                      ) : (
+                        <ChevronRight className="size-4 text-muted-foreground" />
+                      )
+                    ) : (
+                      <ChevronRight className="size-4 text-muted-foreground" />
+                    )}
+                  </div>
+                  {expandedCategories.has(category.slug) && category.subcategories && (
+                    <div className="ml-4 mt-1 space-y-1">
+                      {category.subcategories.map((subcategory) => (
+                        <Link
+                          key={subcategory.slug}
+                          href={subcategory.href || `/categories/${category.slug}/${subcategory.slug}`}
+                          className="flex items-center gap-2 px-3 py-1 text-xs text-muted-foreground hover:bg-accent rounded-md"
+                        >
+                          {'image' in subcategory && subcategory.image && (
+                            <Image
+                              src={subcategory.image}
+                              alt={subcategory.title}
+                              width={16}
+                              height={16}
+                              className="rounded"
+                            />
+                          )}
+                          <span>{subcategory.title}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </aside>
@@ -119,7 +178,7 @@ export default function Home() {
           <aside className="md:col-span-3 flex flex-col gap-4">
             <div className="border rounded-lg p-4">
               <div className="text-sm text-muted-foreground">Welcome to</div>
-              <div className="text-lg font-semibold">TradeHub</div>
+              <div className="text-lg font-semibold">Commace</div>
               <div className="mt-3">
                 {hasEnvVars ? (
                   <AuthButton />
@@ -165,7 +224,7 @@ export default function Home() {
       <footer className="border-t">
         <div className="mx-auto w-full max-w-screen-2xl px-4 py-10 text-xs text-muted-foreground">
           <div className="flex items-center gap-2">
-            <span>© {new Date().getFullYear()} TradeHub.</span>
+            <span>© {new Date().getFullYear()} Commace.</span>
             <span>All rights reserved.</span>
           </div>
         </div>
