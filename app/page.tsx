@@ -12,6 +12,7 @@ import { hasEnvVars } from "@/lib/utils";
 import { ShoppingCart, User, Search, ChevronRight, ChevronDown } from "lucide-react";
 import categoriesData from "@/categories.json";
 import { useState } from "react";
+import { Categories } from "@/components/layout/Sidebar/Categories";
 
 export default function Home() {
   const featured = SAMPLE_PRODUCTS.slice(0, 8)
@@ -34,7 +35,7 @@ export default function Home() {
   return (
     <main className="min-h-screen w-full max-w-full overflow-x-hidden bg-background">
       {/* Sticky top header (Alibaba-style) */}
-      <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="mx-auto w-full max-w-screen-2xl px-4">
           <div className="flex h-16 items-center gap-4">
             <Link href="/" className="text-2xl font-extrabold tracking-tight">
@@ -68,138 +69,91 @@ export default function Home() {
             <span className="font-medium text-foreground">All Categories</span>
             <Link href="/products" className="hover:text-foreground">Products</Link>
             <Link href="/search" className="hover:text-foreground">Search</Link>
-            <Link href="/protected" className="hover:text-foreground">Account</Link>
+            <Link href="/dashboard" className="hover:text-foreground">Dashboard</Link>
           </div>
         </div>
       </header>
 
       {/* Hero area */}
-      <section className="mx-auto w-full max-w-screen-2xl px-4 py-6">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-          {/* Left: vertical categories */}
-          <aside className="md:col-span-3">
-            <div className="border rounded-lg p-2 divide-y">
-              {categoriesWithImages.map((category) => (
-                <div key={category.slug}>
-                  <div
-                    onClick={() => toggleCategory(category.slug)}
-                    className="flex items-center justify-between px-3 py-2 text-sm hover:bg-accent rounded-md cursor-pointer"
-                  >
-                    <div className="flex items-center gap-2">
-                      {category.image && (
-                        <Image
-                          src={category.image}
-                          alt={category.title}
-                          width={20}
-                          height={20}
-                          className="rounded"
-                        />
-                      )}
-                      <span>{category.title}</span>
-                    </div>
-                    {category.subcategories && category.subcategories.length > 0 ? (
-                      expandedCategories.has(category.slug) ? (
-                        <ChevronDown className="size-4 text-muted-foreground" />
-                      ) : (
-                        <ChevronRight className="size-4 text-muted-foreground" />
-                      )
-                    ) : (
-                      <ChevronRight className="size-4 text-muted-foreground" />
-                    )}
-                  </div>
-                  {expandedCategories.has(category.slug) && category.subcategories && (
-                    <div className="ml-4 mt-1 space-y-1">
-                      {category.subcategories.map((subcategory) => (
-                        <Link
-                          key={subcategory.slug}
-                          href={subcategory.href || `/categories/${category.slug}/${subcategory.slug}`}
-                          className="flex items-center gap-2 px-3 py-1 text-xs text-muted-foreground hover:bg-accent rounded-md"
-                        >
-                          {'image' in subcategory && subcategory.image && (
-                            <Image
-                              src={subcategory.image}
-                              alt={subcategory.title}
-                              width={16}
-                              height={16}
-                              className="rounded"
-                            />
-                          )}
-                          <span>{subcategory.title}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </aside>
-          {/* Center: big banner */}
-          <div className="md:col-span-6">
-            <div className="relative aspect-[16/7] w-full overflow-hidden rounded-lg">
+      <section className="flex w-screen mx-auto px-8 py-4  min-h-screen">
+        {/* Categories Sidebar */}
+        <div className="w-80 flex-shrink-0">
+          <Categories
+            categoriesWithImages={categoriesWithImages}
+            expandedCategories={expandedCategories}
+            toggleCategory={toggleCategory} />
+        </div>
+
+        {/* Main Content Area */}
+        <div className="flex-1 ml-6">
+          {/* Main Banner */}
+          <div className="w-full h-80 mb-6 flex flex-col items-center justify-center gap-4 relative">
+            <div className="w-full h-full">
               <Image
-                src="https://picsum.photos/seed/alibaba-hero/1600/700"
-                alt="Global trade made easy"
-                fill
-                className="object-cover"
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1926&q=80"
+                alt="Global marketplace"
+                layout="fill"
+                className="object-cover rounded-lg"
                 priority
               />
-              <div className="absolute inset-0 bg-black/20" />
-              <div className="absolute left-6 top-6 text-white max-w-md">
-                <h2 className="text-2xl md:text-3xl font-bold leading-tight">Source products from trusted sellers worldwide</h2>
-                <p className="mt-2 text-sm md:text-base text-white/90">Discover millions of items across categories with competitive pricing.</p>
-                <div className="mt-4 hidden md:flex gap-2">
-                  <Link href="/products" className="bg-white text-black px-4 py-2 rounded-md text-sm font-medium">Explore Now</Link>
-                  <Link href="/search" className="bg-white/20 backdrop-blur px-4 py-2 rounded-md text-sm font-medium">Start searching</Link>
-                </div>
-              </div>
             </div>
-            <div className="mt-4 grid grid-cols-2 gap-4">
-              <div className="relative aspect-[16/7] overflow-hidden rounded-lg">
-                <Image
-                  src="https://picsum.photos/seed/alibaba-deal-1/1200/525"
-                  alt="Seasonal deals"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/10" />
-              </div>
-              <div className="relative aspect-[16/7] overflow-hidden rounded-lg">
-                <Image
-                  src="https://picsum.photos/seed/alibaba-deal-2/1200/525"
-                  alt="New arrivals"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/10" />
+            <div className="w-full h-full">
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent rounded-lg" />
+              <div className="absolute left-6 bottom-6 right-6 text-white">
+                <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-2">
+                  Discover Amazing Products
+                </h2>
+                <p className="text-lg md:text-xl text-white/90 mb-4 max-w-lg">
+                  Connect with trusted suppliers worldwide and find exactly what you need
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link href="/products" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">
+                    Shop Now
+                    <ChevronRight className="ml-2 size-4" />
+                  </Link>
+                  <Link href="/search" className="bg-white/10 backdrop-blur border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors inline-flex items-center justify-center">
+                    Browse Categories
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-          {/* Right: sign-in widget and small promos */}
-          <aside className="md:col-span-3 flex flex-col gap-4">
-            <div className="border rounded-lg p-4">
-              <div className="text-sm text-muted-foreground">Welcome to</div>
-              <div className="text-lg font-semibold">Commace</div>
-              <div className="mt-3">
-                {hasEnvVars ? (
-                  <AuthButton />
-                ) : (
-                  <div className="flex gap-2">
-                    <Link href="/auth/signup" className="flex-1 text-center bg-foreground text-background rounded-md py-2 text-sm font-medium">Join for free</Link>
-                    <Link href="/auth/signin" className="flex-1 text-center border rounded-md py-2 text-sm font-medium">Sign in</Link>
-                  </div>
-                )}
+
+          {/* Stats and Second Banner Row */}
+          <div className="grid grid-cols-2 gap-6">
+            {/* Stats Section */}
+            <div className="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-6 text-white">
+              <h3 className="text-xl font-bold mb-4">Stats</h3>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span>Total Products:</span>
+                  <span className="font-semibold">1,234,567</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Active Suppliers:</span>
+                  <span className="font-semibold">89,012</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Countries:</span>
+                  <span className="font-semibold">195</span>
+                </div>
               </div>
             </div>
-            <div className="relative aspect-[16/12] overflow-hidden rounded-lg">
-              <Image
-                src="https://picsum.photos/seed/alibaba-right/1200/900"
-                alt="Supplier showcase"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/10" />
+
+            {/* Second Banner */}
+            <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white relative overflow-hidden">
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold mb-2">Premium Services</h3>
+                <p className="text-blue-100 mb-4">Get verified supplier status and premium placement</p>
+                <Link href="/premium" className="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">
+                  Learn More
+                  <ChevronRight className="ml-2 size-4" />
+                </Link>
+              </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="absolute bottom-0 right-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 translate-x-12"></div>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
 

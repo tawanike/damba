@@ -6,7 +6,7 @@ import "./globals.css";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+  : "http://localhost:3004";
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
@@ -40,7 +40,7 @@ export default function RootLayout({
         <Script id="productiq-widget" strategy="afterInteractive">
           {`(function() {
             var script = document.createElement('script');
-            script.src = 'https://www.productiq.tech/widget.js?apiKey=pk_live_ME77NTlX1fZLz1L56fDwm0dVXGla404L';
+            script.src = 'http://localhost:3003/widget.js?apiKey=pk_live_ME77NTlX1fZLz1L56fDwm0dVXGla404L';
             script.async = true;
             document.head.appendChild(script);
           })();`}

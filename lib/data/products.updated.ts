@@ -88,10 +88,10 @@ export const SAMPLE_PRODUCTS: Product[] = [
       id: '437e8a17-6783-4a6e-b6fd-f0aa623a416b',
       name: "Sony WH-1000XM5 Wireless Headphones",
       description:
-        "Industry-leading noise-canceling headphones with up to 30 hours of battery life and crystal-clear call quality.",
-      priceCents: 39999,
-      salePriceCents: 34999,
-      currency: "USD",
+        "Our ultra comfortable WH-1000XM5 headphones rewrite the rules for distraction-free listening and exceptional call clarity. Two processors control multiple microphones for unprecedented noise cancelling while Auto NC Optimizer automatically optimises noise cancelling based on your wearing conditions and environment. The specially designed 30mm driver unit delivers superior sound quality for all your entertainment.",
+      priceCents: 6999,
+      salePriceCents: 6999,
+      currency: "ZAR",
       imageUrl:
         "https://m.media-amazon.com/images/I/61+Q6Rh3OQL._AC_SL1500_.jpg",
       category: "Audio",
